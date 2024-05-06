@@ -1,3 +1,5 @@
+const sortAbilities = require('../utils/sortAbilities');
+
 exports.searchPokemon = async (req, res) => {
   try {
     const { pokemon } = req.body;
@@ -9,8 +11,14 @@ exports.searchPokemon = async (req, res) => {
     }
 
     const parsedResponse = await response.json();
+    const sortedAbilities = sortAbilities(parsedResponse.abilities);
 
-    res.status(response.status).json(parsedResponse);
+    const serializedResponse = {
+      ...parsedResponse,
+      abilities: sortedAbilities
+    };
+
+    res.status(response.status).json(serializedResponse);
   } catch (error) {
     console.error(error);
     res.status(500).send("Internal Server Error");
