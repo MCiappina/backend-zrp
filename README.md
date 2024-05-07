@@ -21,11 +21,11 @@ Replace #### with the port number you want to assign to your backend.
 3. Build the Docker image:
 
 ```
-docker build -t zrp-backend .
+docker buildx build . -t backend-zrp
 ```
 4. Run the Docker image:
 ```
-docker run -p 8080:8080 zrp-backend
+docker run -p 8080:8080 backend-zrp
 ```
 Replace 8080 with the port number you specified in the .env file.
 
