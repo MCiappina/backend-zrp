@@ -1,9 +1,11 @@
+require("dotenv").config();
+
 const sortAbilities = require('../utils/sortAbilities');
 
 exports.searchPokemon = async (req, res) => {
   try {
     const { pokemon } = req.body;
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    const response = await fetch(`${process.env.POKE_API_URL}${pokemon}`);
 
     if (!response.ok) {
       const errorText = await response.text();
