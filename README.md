@@ -1,6 +1,6 @@
 # ZRP Backend Project
 
-This project is a backend application built in Node.js for the ZRP company. It provides a RESTful API for accessing Pokémon data. The project includes tests written with Jest for ensuring the reliability of the codebase.
+This project is a backend application built in Node.js for the ZRP company. It serves a frontend for ZRP test case: https://github.com/MCiappina/frontend-zrp. It provides an API for accessing Pokémon data. The project includes tests written with Jest for ensuring the reliability of the codebase.
 
 ## Getting Started
 
