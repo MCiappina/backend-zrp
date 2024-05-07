@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "index.js",
         "pokemonController.js",
-        "Dockerfile"
+        "Dockerfile",
+        ".env_example"
     ]
 }
